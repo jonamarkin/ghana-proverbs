@@ -10,27 +10,11 @@ const proverbs = ref([
 ]);
 
 const chips = ref([
-  "All", "Twi", "Ewe", "Ga", "Fante"
+  "Default", "Twi", "Ewe", "Ga", "Fante"
 ]);
 
-//Filter proverbs
-const selectedChips = ref(["All"]);
 
-const filterProverbs = (chip) => {
-  if (chip === "All") {
-    selectedChips.value = ["All"];
-  } else {
-    if (selectedChips.value.includes("All")) {
-      selectedChips.value = [chip];
-    } else {
-      if (selectedChips.value.includes(chip)) {
-        selectedChips.value = selectedChips.value.filter((c) => c !== chip);
-      } else {
-        selectedChips.value = [...selectedChips.value, chip];
-      }
-    }
-  }
-};
+
 
 </script>
 
@@ -72,25 +56,21 @@ const filterProverbs = (chip) => {
 
       <v-divider class="mx-4 mb-1"></v-divider>
 
-      <v-card-title>Tonight's availability</v-card-title>
+      <v-card-title>Translate</v-card-title>
 
       <div class="px-4">
         <v-chip-group v-model="selection">
-          <v-chip>5:30PM</v-chip>
+          <v-chip v-for="chip in chips">{{ chip }}</v-chip>
 
-          <v-chip>7:30PM</v-chip>
 
-          <v-chip>8:00PM</v-chip>
-
-          <v-chip>9:00PM</v-chip>
         </v-chip-group>
       </div>
 
-      <v-card-actions>
+      <!-- <v-card-actions>
         <v-btn color="deep-purple-lighten-2" variant="text" @click="reserve">
           Reserve
         </v-btn>
-      </v-card-actions>
+      </v-card-actions> -->
     </v-card>
 
 
