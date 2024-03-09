@@ -1,15 +1,15 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from 'vue'
+import MenuBar from './components/MenuBar.vue'
 
 </script>
 
 <template>
 
-  <div class="container mx-auto px-4 ">
-    asasasas
-  </div>
+
   <header>
+    <MenuBar />
 
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
