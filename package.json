@@ -12,7 +12,8 @@
     "pinia": "^2.1.7",
     "primevue": "^3.49.1",
     "vue": "^3.4.15",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.5.8"
   },
   "devDependencies": {
     "@mdi/font": "^7.4.47",

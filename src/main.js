@@ -1,8 +1,18 @@
 import './assets/main.css'
-import 'primevue/resources/themes/aura-light-green/theme.css'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import PrimeVue from 'primevue/config';
+
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+    components,
+    directives,
+})
 
 
 import App from './App.vue'
@@ -14,7 +24,7 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-app.use(PrimeVue)
+app.use(vuetify)
 
 
 app.mount('#app')
